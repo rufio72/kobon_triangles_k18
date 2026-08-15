@@ -93,12 +93,16 @@ asymmetric bulk of the search space remains untouched: **the gap
 "93 or 94" is still open**, but it is now provably not hiding behind
 any natural symmetry.
 
-As a by-product, the C3 run at 93 produced a **new arrangement**:
-93 triangles with combinatorial 120°-rotation symmetry, isomorphic to
-none of the 2,337 in this package, straightened to real lines with
-exact rational certification
-([lines](c3_symmetric_93_lines.json), lines colored by rotation orbit
-in the figure):
+As a by-product, the symmetric search produced **70 new
+arrangements**, all with combinatorial 120°-rotation symmetry and all
+isomorphic to **none** of the 2,337 in this package (exact canonical
+forms — free random search never lands on the measure-zero symmetric
+subspace, so symmetry had to be imposed to find them). 69 come from
+the C3 orbital annealing kernel — 48 of them straightened to real
+lines with exact rational certification — and are bundled in
+[`c3_symmetric/`](c3_symmetric/); the 70th was found by the SAT model
+itself ([lines](c3_symmetric_93_lines.json), lines colored by
+rotation orbit in the figure):
 
 ![A 93-triangle arrangement of 18 real lines with combinatorial
 3-fold rotational symmetry, lines colored by orbit](c3_symmetric_93.svg)

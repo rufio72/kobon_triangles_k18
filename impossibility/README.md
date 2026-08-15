@@ -18,9 +18,14 @@ The limits:
   pairs, which under a symmetry come in whole orbits) are **not**
   covered by the SAT model, with one exception: a triple point at a
   C3 center forces the count `≡ 0 (mod 3)`, hence `≤ 93` (arithmetic,
-  see below). Against the remaining degenerate cases we only have
-  strong stochastic evidence (500+ symmetric annealing runs of 10M
-  orbit-moves with the degenerate frontier enabled: 94 never seen).
+  see below). Against the remaining degenerate cases the evidence is
+  stochastic but targeted: beyond 500+ symmetric annealing runs with
+  the degenerate frontier enabled, a dedicated campaign of **170 runs
+  of 10M orbit-moves confined to the degenerate window** (floors
+  forcing ≥1 or ≥2 orbits of triple points / parallel pairs, every
+  best reached while degenerate) topped out at **93** with one forced
+  orbit and **91** with two — 94 was never seen, and 92 never
+  appeared, exactly as the orbit arithmetic demands.
 * Asymmetric arrangements are untouched. The gap `93 vs 94` stays open.
 
 ## Part 1 — arithmetic: most symmetries never had a chance

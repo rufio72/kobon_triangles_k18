@@ -57,6 +57,47 @@ as "N(18) = 93" is reading more into it than it says. Settling
 `k = 18` needs an exhaustive method (SAT over crossing orders, as
 Savchuk used to settle `k = 11`), not more annealing.
 
+### Update 2026-08-15: where 94 provably cannot be
+
+The exhaustive method has now been applied to the **symmetric** part
+of the search space, using **Pavlo Savchuk's kobon-cnf model**
+(arXiv:2507.07951, [zegalur/kobon-cnf](https://github.com/zegalur/kobon-cnf))
+with Kissat 4.0.4 and DRAT-verified proofs. Machine-checked results,
+full details and reproduction scripts in
+[`impossibility/`](impossibility/):
+
+* **No simple C3-symmetric arrangement of 18 pseudolines forms 94
+  triangles** — the C3-symmetric simple maximum is **exactly 93**
+  (SAT at 93 in 3 minutes; UNSAT at 94 in 99 minutes, 2.1 GB DRAT
+  proof verified). C3 was the *only* rotational symmetry whose orbit
+  arithmetic is compatible with 94.
+* The mirror family with fixed lines (axis in the arrangement plus one
+  perpendicular line) tops out **below 87**: UNSAT with verified
+  proofs at every target from 94 down to 87.
+* Rotations C2, C4, C6, C9, C18 are excluded by orbit arithmetic
+  alone (e.g. under C4 every triangle orbit has size 4, so the count
+  is a multiple of 4 — at most 92).
+* The last symmetric family — mirror with **9 free pairs and no fixed
+  line**, count necessarily even, `94 = 47 pairs` — is still being
+  solved; this section will be updated with its verdict.
+
+These results cover simple pseudoline arrangements (hence also
+straight lines). Degenerate symmetric cases stay open, except a
+triple point at a C3 center (arithmetically capped at 93). The
+asymmetric bulk of the search space remains untouched: **the gap
+"93 or 94" is still open**, but it is now provably not hiding behind
+the natural symmetries.
+
+As a by-product, the C3 run at 93 produced a **new arrangement**:
+93 triangles with combinatorial 120°-rotation symmetry, isomorphic to
+none of the 2,337 in this package, straightened to real lines with
+exact rational certification
+([lines](c3_symmetric_93_lines.json), lines colored by rotation orbit
+in the figure):
+
+![A 93-triangle arrangement of 18 real lines with combinatorial
+3-fold rotational symmetry, lines colored by orbit](c3_symmetric_93.svg)
+
 ## Layout
 
 ```

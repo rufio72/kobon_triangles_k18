@@ -80,13 +80,18 @@ with the project's independent counter, and its symmetry re-checked.
 | `mir_k18_93` | mirror, 2 fixed lines | UNSAT | 23 s | DRAT verified |
 | `mir_k18_94` | mirror, 2 fixed lines | UNSAT | 15 s | DRAT verified |
 | `mir_k18_87…92` | mirror, 2 fixed lines | all UNSAT (family max < 87) | 8–31 s each | DRAT verified |
-| `mir2_k18_94` | mirror, 9 free pairs | **pending** (solver running) | — | — |
+| `mir2_k18_94` | mirror, 9 free pairs | **UNSAT** | 3 498 s | DRAT verified (1.7 GB) |
 
-**Headline result:** *no simple C3-symmetric arrangement of 18
-pseudolines forms 94 triangles; the C3-symmetric simple maximum is
-exactly 93.* Combined with Part 1, once `mir2_k18_94` concludes,
-every nontrivial planar symmetry will be either arithmetically
-excluded or certificate-closed for the simple case.
+**Headline results:**
+
+1. *No simple C3-symmetric arrangement of 18 pseudolines forms 94
+   triangles; the C3-symmetric simple maximum is exactly 93.*
+2. *No simple mirror-symmetric arrangement of 18 pseudolines forms 94
+   triangles* (both mirror families).
+3. Combined with Part 1: **every nontrivial planar symmetry is either
+   arithmetically excluded or certificate-closed — a simple
+   94-triangle arrangement of 18 pseudolines, if it exists, is
+   asymmetric.**
 
 ### Validation ladder (all green before touching k = 18)
 

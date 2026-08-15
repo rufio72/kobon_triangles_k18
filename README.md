@@ -78,15 +78,20 @@ full details and reproduction scripts in
   alone (e.g. under C4 every triangle orbit has size 4, so the count
   is a multiple of 4 — at most 92).
 * The last symmetric family — mirror with **9 free pairs and no fixed
-  line**, count necessarily even, `94 = 47 pairs` — is still being
-  solved; this section will be updated with its verdict.
+  line**, count necessarily even, `94 = 47 pairs` — is **UNSAT** as
+  well (58 minutes, 1.7 GB DRAT proof verified).
+
+With that, the classification is **complete**: every nontrivial
+planar symmetry is either excluded by orbit arithmetic or closed by a
+machine-verified certificate. **A simple 94-triangle arrangement of
+18 pseudolines, if it exists, is asymmetric.**
 
 These results cover simple pseudoline arrangements (hence also
 straight lines). Degenerate symmetric cases stay open, except a
 triple point at a C3 center (arithmetically capped at 93). The
 asymmetric bulk of the search space remains untouched: **the gap
 "93 or 94" is still open**, but it is now provably not hiding behind
-the natural symmetries.
+any natural symmetry.
 
 As a by-product, the C3 run at 93 produced a **new arrangement**:
 93 triangles with combinatorial 120°-rotation symmetry, isomorphic to

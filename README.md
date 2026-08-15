@@ -57,7 +57,7 @@ as "N(18) = 93" is reading more into it than it says. Settling
 `k = 18` needs an exhaustive method (SAT over crossing orders, as
 Savchuk used to settle `k = 11`), not more annealing.
 
-### Update 2026-08-15: where 94 provably cannot be
+## Where 94 provably cannot be (update 2026-08-15)
 
 The exhaustive method has now been applied to the **symmetric** part
 of the search space, using **Pavlo Savchuk's kobon-cnf model**

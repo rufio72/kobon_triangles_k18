@@ -109,6 +109,43 @@ with the project's independent counter, and its symmetry re-checked.
 * Mirror (9 pairs): k=8 SAT@14 — the known simple maximum of 8 lines,
   found inside the 4-pair family, involution verified on the model.
 
+## Part 3 — the parallel census
+
+A segment-counting theorem (elementary; no triple points): with
+parallel classes of sizes `m_j`, the finite segments number
+`S = 288 − Σ m_j(m_j−1)`, each triangle uses 3, each segment serves at
+most one triangle, so `T ≤ ⌊S/3⌋`. Consequences at `k = 18`:
+
+* any parallel class of **4 or more** lines caps the count at 92 —
+  it cannot even reach the record 93;
+* **4 or more parallel pairs** cap at 93; a class of 3 plus anything
+  else caps below 94;
+* only four parallel structures stay arithmetically compatible with
+  94: one pair (4 missing segments allowed), two pairs (2), three
+  pairs (0 — perfect covering), one class of three (0).
+
+The two perfect-covering windows were closed by SAT, using a fork of
+the kobon-cnf generator with per-row domains (parallel partners
+removed; a segment bounded by two parallels can never close, which at
+zero budget is forbidden outright). The fork was validated on five
+anchors: regression against the base model, the **hexagram** (k=6,
+three parallel pairs, SAT exactly at its cap 6), an arithmetic UNSAT,
+and a two-sided cross-check against the independent annealing kernel
+at k=8 with a forced pair (SAT@14 = kernel max, UNSAT@15).
+
+| instance | window | verdict | kissat |
+|---|---|---|---|
+| `par_k18_c3_94` | class of 3 parallels | **UNSAT** | 23 s |
+| `par_k18_3cp_94` | three parallel pairs | **UNSAT** | 137 s |
+| `par_k18_2cp_94` | two pairs | attempted, **abandoned** after 3.5 h (proof past 10 GB) | — |
+| `par_k18_1cp_94` | one pair | **not attempted** (projected slower still) | — |
+
+The two abandoned windows remain open as exact questions; against
+them stands the same stochastic evidence as everywhere else (94 never
+seen in any campaign, including runs with forced parallel pairs).
+We stopped deliberately: past this point compute grows while insight
+does not, and these were the least structured windows left.
+
 ## The new arrangement: a C3-symmetric 93
 
 `rot3_k18_93` produced a 93-triangle arrangement with combinatorial
